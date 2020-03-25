@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Suivi IMG</string>
+    <string name="title_activity_maps">Map</string>
+    
+    <string-array name="ville_sport">
+        <item>Montesson</item>
+        <item>Le Pecq</item>
+        <item>Le Vésinet</item>
+        <item>Sartrouville</item>
+        <item>Chatou</item>
+    </string-array>
+
+    <string-array name="nb_salle">
+        <item>5</item>
+        <item>2</item>
+        <item>3</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+</resources>
