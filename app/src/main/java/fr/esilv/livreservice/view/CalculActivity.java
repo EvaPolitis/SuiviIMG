@@ -2,8 +2,11 @@ package fr.esilv.livreservice.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,10 +47,10 @@ public class CalculActivity extends AppCompatActivity {
         txtTaille=(EditText)findViewById(R.id.txtTaille);
         txtAge=(EditText)findViewById(R.id.txtAge);
         rdHomme=(RadioButton)findViewById(R.id.rdHomme);
-        labIMG=(TextView)findViewById(R.id.labIMG);
+       // labIMG=(TextView)findViewById(R.id.);
         imgEmoji=(ImageView)findViewById(R.id.imgEmoji);
         listenCalcul();
-        listenAccueil();
+       //listenAccueil();
     }
 
     /**
@@ -85,15 +88,16 @@ public class CalculActivity extends AppCompatActivity {
         });
     }
 
+    /*
     private void listenAccueil(){
         ((ImageButton)findViewById(R.id.btnAccueil)).setOnClickListener(new ImageButton.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(CalculActivity.this,MainActivity.class);
+                Intent intent = new Intent(CalculActivity.this,MenuActivity.class);
                 startActivity(intent);
             }
         });
     }
-
+*/
     /**
      * Affichage de l'img, du message et de l'image
      * @param poids
@@ -109,12 +113,34 @@ public class CalculActivity extends AppCompatActivity {
 
         //affichage
         if(message=="normal"){
+            /*
             imgEmoji.setImageResource(R.drawable.sunglasses);
-            labIMG.setTextColor(Color.GREEN);
+            labIMG.setTextColor(Color.GREEN);*/
+            DisplayMessage(img,this.getDrawable(R.drawable.sunglasses));
         }else {
+            /*
             imgEmoji.setImageResource(R.drawable.hurt);
-            labIMG.setTextColor(Color.RED);
+            labIMG.setTextColor(Color.RED);*/
+            DisplayMessage(img,this.getDrawable(R.drawable.hurt));
         }
-        labIMG.setText(String.format("%.01f",img)+" : IMG "+ message);
+    }
+
+    private void DisplayMessage(float IMC, Drawable message )
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+
+        builder.setTitle("Resultat")
+                .setMessage("Your IMC is egal to " + String.format("%.01f",IMC))
+                .setIcon(message)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(CalculActivity.this,MenuActivity.class);
+                        finish();
+                    }
+                })
+                .create()
+                .show();
     }
 }

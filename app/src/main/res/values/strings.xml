@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Suivi IMG</string>
     <string name="title_activity_maps">Map</string>
-    
+
     <string-array name="ville_sport">
         <item>Montesson</item>
         <item>Le Pecq</item>
@@ -11,10 +11,11 @@
     </string-array>
 
     <string-array name="nb_salle">
-        <item>5</item>
-        <item>2</item>
-        <item>3</item>
-        <item>3</item>
-        <item>5</item>
+        <item>Il y a 5 lieux sportifs</item>
+        <item>Il y a 2 lieux sportifs</item>
+        <item>Il y a 3 lieux sportifs</item>
+        <item>Il y a 3 lieux sportifs</item>
+        <item>Il y a 5 lieux sportifs</item>
     </string-array>
+    <string name="title_activity_location">Map</string>
 </resources>

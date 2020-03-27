@@ -148,6 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Calculer"
+                android:background="@color/colorMaj"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -169,29 +170,11 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/smiling" />
 
-            <TextView
-                android:id="@+id/labIMG"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="407dp"
-            android:layout_gravity="right"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/btnAccueil"
-                android:layout_width="134dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/accueil" />
-        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
